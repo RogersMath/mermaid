@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR Indie Gamedev Ecosystem Project - Gantt Chart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.3.0/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">PR Indie Gamedev</h1>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:underline">Mindmap</a></li>
+                <li><a href="gantt.html" class="hover:underline">Gantt Chart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto mt-8 p-4">
+        <h2 class="text-3xl font-bold mb-4">Development Timeline</h2>
+        <div class="mermaid">
+gantt
+    title PR Indie Gamedev Ecosystem Project Timeline
+    dateFormat  YYYY-MM-DD
+    section Platform Development
+    Set up website structure   :a1, 2024-09-01, 30d
+    Develop content strategy   :a2, after a1, 45d
+    Launch beta version        :a3, after a2, 30d
+    section Content Creation
+    Create initial tutorials   :b1, 2024-09-15, 60d
+    Record developer interviews:b2, 2024-10-01, 90d
+    Produce game playthroughs  :b3, 2024-11-01, 120d
+    section Community Building
+    Set up Discord server      :c1, 2024-09-01, 15d
+    Organize first game jam    :c2, 2025-01-01, 45d
+    Launch mentorship program  :c3, 2025-03-01, 60d
+    section Monetization
+    Implement affiliate links  :d1, 2024-12-01, 30d
+    Develop premium content    :d2, 2025-02-01, 90d
+    Establish partnerships     :d3, 2025-04-01, 120d
+        </div>
+    </main>
+</body>
+</html>
