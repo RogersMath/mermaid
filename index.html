@@ -11,8 +11,9 @@
             startOnLoad: true,
             theme: 'default',
             flowchart: {
-                useMaxWidth: false,
-                htmlLabels: true
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
             }
         });
     </script>
@@ -31,27 +32,48 @@
     <main class="container mx-auto mt-8 p-4">
         <h2 class="text-3xl font-bold mb-4">Lead Magnet Ideas</h2>
         <div class="mermaid">
-flowchart TD
-    A[Lead Magnets] --> B[Educational Resources]
-    A --> C[Tools and Templates]
-    A --> D[Exclusive Content]
-    A --> E[Community Access]
-    A --> F[Asset Packs]
-    B --> B1[Beginner's Guide to Godot]
-    B --> B2["Game Design 101" eBook]
-    B --> B3[Asset Creation Cheat Sheet]
-    C --> C1[Godot Project Starter Kit]
-    C --> C2[Game Design Document Template]
-    C --> C3[Indie Dev Budgeting Spreadsheet]
-    D --> D1[Behind-the-Scenes Development Footage]
-    D --> D2[Interview with Successful Indie Dev]
-    D --> D3[Early Access to PR Tutorials]
-    E --> E1[1-Month Free Access to Premium Discord]
-    E --> E2[Invitation to Private Q&A Session]
-    E --> E3[Entry to Exclusive Game Jam]
-    F --> F1[Royalty-Free Sound Effects Pack]
-    F --> F2[2D Sprite Sheet Collection]
-    F --> F3[3D Low-Poly Model Pack]
+graph TB
+    LM((Lead Magnets))
+    
+    subgraph ER [Educational Resources]
+        B1[Beginner's Guide to Godot]
+        B2["Game Design 101" eBook]
+        B3[Asset Creation Cheat Sheet]
+    end
+
+    subgraph TT [Tools and Templates]
+        C1[Godot Project Starter Kit]
+        C2[Game Design Document Template]
+        C3[Indie Dev Budgeting Spreadsheet]
+    end
+
+    subgraph EC [Exclusive Content]
+        D1[Behind-the-Scenes Development Footage]
+        D2[Interview with Successful Indie Dev]
+        D3[Early Access to PR Tutorials]
+    end
+
+    subgraph CA [Community Access]
+        E1[1-Month Free Access to Premium Discord]
+        E2[Invitation to Private Q&A Session]
+        E3[Entry to Exclusive Game Jam]
+    end
+
+    subgraph AP [Asset Packs]
+        F1[Royalty-Free Sound Effects Pack]
+        F2[2D Sprite Sheet Collection]
+        F3[3D Low-Poly Model Pack]
+    end
+
+    LM --- ER
+    LM --- TT
+    LM --- EC
+    LM --- CA
+    LM --- AP
+
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef subgraph fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5;
+    class ER,TT,EC,CA,AP subgraph;
         </div>
     </main>
 </body>
