@@ -7,7 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.3.0/mermaid.min.js"></script>
     <script>
-        mermaid.initialize({ startOnLoad: true });
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true
+            }
+        });
     </script>
 </head>
 <body class="bg-gray-100">
@@ -24,28 +31,27 @@
     <main class="container mx-auto mt-8 p-4">
         <h2 class="text-3xl font-bold mb-4">Lead Magnet Ideas</h2>
         <div class="mermaid">
-mindmap
-  root((Lead Magnets))
-    Educational Resources
-      Beginner's Guide to Godot
-      "Game Design 101" eBook
-      Asset Creation Cheat Sheet
-    Tools and Templates
-      Godot Project Starter Kit
-      Game Design Document Template
-      Indie Dev Budgeting Spreadsheet
-    Exclusive Content
-      Behind-the-Scenes Development Footage
-      Interview with Successful Indie Dev
-      Early Access to PR Tutorials
-    Community Access
-      1-Month Free Access to Premium Discord
-      Invitation to Private Q&A Session
-      Entry to Exclusive Game Jam
-    Asset Packs
-      Royalty-Free Sound Effects Pack
-      2D Sprite Sheet Collection
-      3D Low-Poly Model Pack
+flowchart TD
+    A[Lead Magnets] --> B[Educational Resources]
+    A --> C[Tools and Templates]
+    A --> D[Exclusive Content]
+    A --> E[Community Access]
+    A --> F[Asset Packs]
+    B --> B1[Beginner's Guide to Godot]
+    B --> B2["Game Design 101" eBook]
+    B --> B3[Asset Creation Cheat Sheet]
+    C --> C1[Godot Project Starter Kit]
+    C --> C2[Game Design Document Template]
+    C --> C3[Indie Dev Budgeting Spreadsheet]
+    D --> D1[Behind-the-Scenes Development Footage]
+    D --> D2[Interview with Successful Indie Dev]
+    D --> D3[Early Access to PR Tutorials]
+    E --> E1[1-Month Free Access to Premium Discord]
+    E --> E2[Invitation to Private Q&A Session]
+    E --> E3[Entry to Exclusive Game Jam]
+    F --> F1[Royalty-Free Sound Effects Pack]
+    F --> F2[2D Sprite Sheet Collection]
+    F --> F3[3D Low-Poly Model Pack]
         </div>
     </main>
 </body>
